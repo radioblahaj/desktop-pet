@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dipxje2nwxlkh" path="res://shark cat_walk.png" id="1_4gou1"]
 [ext_resource type="Texture2D" uid="uid://brngyiak8knba" path="res://shark cat_happy.png" id="1_asdu3"]
-[ext_resource type="Texture2D" uid="uid://cxjfj3rmmh0yy" path="res://shark cat_alret.png" id="1_mwhxy"]
+[ext_resource type="Script" uid="uid://bioxrraojqonh" path="res://game.gd" id="1_jvxxq"]
+[ext_resource type="Texture2D" uid="uid://cxjfj3rmmh0yy" path="res://addons/shark cat_alret.png" id="1_mwhxy"]
 [ext_resource type="Texture2D" uid="uid://c12fd1dep1p38" path="res://shark cat_idle.png" id="2_mwhxy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ocl5o"]
@@ -216,19 +217,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mwhxy"]
-size = Vector2(43.714287, 50.000008)
+size = Vector2(51.729477, 63.08781)
 
 [node name="Node2D" type="Node2D" unique_id=1363628670]
+script = ExtResource("1_jvxxq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2043554861]
-position = Vector2(4, -2.3841858e-07)
-scale = Vector2(1.1666666, 0.99999994)
+position = Vector2(143.00002, 122)
+scale = Vector2(3.9166665, 3.203125)
 sprite_frames = SubResource("SpriteFrames_4gou1")
-animation = &"Idle"
-frame_progress = 0.9684506
+animation = &"Alert"
+frame_progress = 0.04613181
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=788664885]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1122828144]
-position = Vector2(-11.571429, -11)
+position = Vector2(-10.800915, -6.5682964)
+scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_mwhxy")
