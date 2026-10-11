@@ -5,12 +5,15 @@ var direction = Vector2(2,0)
 var screen_size = Vector2()
 var window_size = Vector2(200,200)
 
+
+
 func _ready():
 	screen_size = Vector2(DisplayServer.screen_get_size())
 	
 
-func _physics_proess(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var window_position = Vector2(DisplayServer.window_get_position())
+	print(window_position)
 	window_position += direction * speed * delta
 	print(window_position)
 	window_position.x = clamp(window_position.x, 0, screen_size.x - window_size.x)
